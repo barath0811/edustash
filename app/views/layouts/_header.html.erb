@@ -1,0 +1,20 @@
+<%= favicon_link_tag 'favicon.jpg' %>
+<div id="fb-root"></div>
+<div id="notification-bar">
+	<% flash.each do |key, value| %>
+	<div class="flash <%= key %>"><%= value %></div>
+	<% end %>
+</div>
+
+<div class="navbar navbar-fixed-top" id="customNav" role="banner">
+	<div class="navbar-inner">
+		<ul class="pull-right">
+			<% if user_signed_in? %> 
+				<li><%= current_user.email %></li>
+				<li><%= link_to "Logout", destroy_user_session_path %></li>
+			<% else %> 
+				<li><%= link_to "Login", new_user_session_path, :rel => "modal:open", :id => "login-form" %></li>
+				<li><%= link_to "Register", new_user_registration_path, :rel => "modal:open" %></li> 
+			<% end %>
+		</ul>
+</div>
