@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @link.title %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @link.url %>
+</p>
+
+<p>
+  <strong>Up votes:</strong>
+  <%= @link.up_votes %>
+</p>
+
+<p>
+  <strong>Down votes:</strong>
+  <%= @link.down_votes %>
+</p>
+
+<p>
+  <strong>Reported spam count:</strong>
+  <%= @link.reported_spam_count %>
+</p>
+
+<p>
+  <strong>Is valid:</strong>
+  <%= @link.is_valid %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @link.topic %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
