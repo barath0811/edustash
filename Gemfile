@@ -34,6 +34,11 @@ gem "twitter-bootstrap-rails"
 
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
+gem "select2-rails"
+gem 'simple_form', '>= 3.0.0.rc'
+
+gem 'rails_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
